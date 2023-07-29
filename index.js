@@ -1,55 +1,54 @@
-
-console.log("Hello, world!")
-    
-function getComputerChoice(){ maths.floor(maths.random*3())
-return "rock", "paper", "scissors"    
-}
-console.log(getComputerChoice)
-    function getPlayerChoice(){
-        
-        return "rock", "paper", "scissors";
-        }
-        console.log(getPlayerChoice)
-    function playGame(){ document.addEventListener("click");
-     const getPlayerChoice = prompt("make your selection: rock or paper or scissors");
-          
-    if(getComputerChoice===("rock"))
-    if(getPlayerChoice===("rock")){ 
-            promt("it is a tie!");
-        }
-     if(getComputerChoice===("rock"))
-    if(getPlayerChoice===("paper"));{
-        promt("You win!")
+// JavaScript
+function play(playerChoice) {
+    const choices = ['rock', 'paper', 'scissors'];
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    const result = playround(playerChoice, computerChoice);
+    document.getElementById('results').innerText = result;
+  }
+  
+  function playround(playerChoice, computerChoice) {
+    if (!['rock', 'paper', 'scissors'].includes(playerChoice)) {
+      return "Invalid choice. Please choose 'rock', 'paper', or 'scissors'.";
     }
-     if(computerChoice===("paper"))
-    if(playerChoice===("rock"));{
-     prompt("computer wins!");
+    if (playerChoice === computerChoice) {
+      return "It's a tie!";
+    } else if (
+      (playerChoice === 'rock' && computerChoice === 'scissors') ||
+      (playerChoice === 'paper' && computerChoice === 'rock') ||
+      (playerChoice === 'scissors' && computerChoice === 'paper')
+    ) {
+      return `You win! You chose ${playerChoice}, computer chose ${computerChoice}.`;
+    } else {
+      return `You lose! You chose ${playerChoice}, computer chose ${computerChoice}.`;
     }
-     if(computerChoice===("rock"))
-    if(playerChoice===("Scissors"));{
-    prompt("You lose!, computer wins!");
+  }
+  
+  function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+  
+    for (let x = 0; x < 5; x++) {
+      const playerChoice = prompt("Enter your choice: rock, paper, or scissors");
+      const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+      const result = playround(playerChoice, computerChoice);
+      document.getElementById('results').innerHTML = result;
+  
+      if (result.includes('win')) {
+        playerScore++;
+      } else if (result.includes('lose')) {
+        computerScore++;
+      }
     }
-    if(computerChoice===("paper"))
-    if(playerChoice===("scissors"));{
-        prompt("You win!");
+  
+    if (playerScore > computerScore) {
+      document.getElementById('results').innerHTML = "You have won!";
+    } else if (playerScore < computerScore) {
+      document.getElementById('results').innerHTML = "Computer won!";
+    } else {
+      document.getElementById('results').innerHTML = "It's a tie!";
     }
-    if(getComputerChoice===("paper"))
-    if(playerChoice===("paper")){ 
-            promt("it is a tie!");
-        }
-if(computerChoice===("scissors"))
-if(playerChoice===("scissors"));{
-    prompt("its a tie");
-}
-if(computerChoice===("scissors"))
-if(playerChoice===("paper"));{
-    prompt("You lose!, computer wins!");
-    }
-    if(computerChoice===("Scissors"))
-    if(playerChoice===("rock"));{
-    prompt("You win!");
-    }
-}
-    
-
-
+  }
+  
+  // Call the game function to start the game
+  game();
+  
