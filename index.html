@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Java</title>
-<link rel="stylesheet"  href="/home/ahmed/JAVASCRIPT/style.css">
-    </head>
-    <body>
-        <div class="container">
+<head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="/home/ahmed/JAVASCRIPT/style.css">
+</head>
+<body>
+    <div class="container">
         <h1>Rock Paper Scissors Game</h1>
  
         <p>Make your choice:</p>
-        <button  onclick="play('rock')">ROCK</button>
-        <button  onclick="play('paper')">PAPER</button>
-        <button  onclick="play('scissors')">SCISSORS</button>
+        <button onclick="play('rock')">ROCK</button>
+        <button onclick="play('paper')">PAPER</button>
+        <button onclick="play('scissors')">SCISSORS</button>
 
-        <P><div id="results">Result</div></P>
+        <div id="results">Result</div>
+
+        <div class="box">
+            <div class="left-item">
+                <div id="computer-score">Computer: 0</div>
+            </div>
+            <div class="right-item">
+                <div id="player-score">Player: 0</div>
+            </div>
+        </div>
     </div>
-        <script src="/home/ahmed/rock-paper-scissors/index.js"></script>
-    </body>
+
+    <script src="index.js"></script>
+</body>
 </html>
