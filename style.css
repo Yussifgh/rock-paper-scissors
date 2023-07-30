@@ -11,9 +11,22 @@ button{height:30px;
      width:100px;
     background-color: #00bf0b;
 border-radius: 8px;
-box-shadow: none;
+botton-shadow: 0;
+
 }
-#result{background-color: #00bf0b;
+#results{background-color: aliceblue;
 color: #000000;
 font-size: medium;
-font-weight: 600;}
+font-weight: 700;}
+.left-item, .right-item{background-color: #00bf0b;
+    color: #000000;
+    border-top: 10px
+    margin-top: 10px;
+}
+.box{height: 60px;
+    width: 780px;
+    background-color: #55f4ff;
+    color:#000000;
+    font-style: italic;
+}
+p,h1{color: #000000;}
