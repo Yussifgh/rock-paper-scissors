@@ -2,11 +2,11 @@
 function play(playerChoice) {
     const choices = ['rock', 'paper', 'scissors'];
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
-    const result = playround(playerChoice, computerChoice);
+    const result = playRound(playerChoice, computerChoice);
     document.getElementById('results').innerText = result;
   }
   
-  function playround(playerChoice, computerChoice) {
+  function playRound(playerChoice, computerChoice) {
     if (!['rock', 'paper', 'scissors'].includes(playerChoice)) {
       return "Invalid choice. Please choose 'rock', 'paper', or 'scissors'.";
     }
@@ -21,16 +21,17 @@ function play(playerChoice) {
     } else {
       return `You lose! You chose ${playerChoice}, computer chose ${computerChoice}.`;
     }
-  }
+  
   
   function game() {
     let playerScore = 0;
     let computerScore = 0;
   
     for (let x = 0; x < 5; x++) {
-      const playerChoice = prompt("Enter your choice: rock, paper, or scissors");
+     const choices = ['rock', 'paper', 'scissors'];
+      const playerChoice = choices;
       const computerChoice = choices[Math.floor(Math.random() * choices.length)];
-      const result = playround(playerChoice, computerChoice);
+      const result = playRound(playerChoice, computerChoice);
       document.getElementById('results').innerHTML = result;
   
       if (result.includes('win')) {
@@ -48,7 +49,6 @@ function play(playerChoice) {
       document.getElementById('results').innerHTML = "It's a tie!";
     }
   }
+  }
   
-  // Call the game function to start the game
-  game();
   
