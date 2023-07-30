@@ -1,0 +1,18 @@
+html,body{display:flex;
+         background-color: #00bf0b;}
+.container{
+    height: 300px;
+     width: 780px; 
+    background-color: pink;
+    color:#0000;
+align-items: center;
+justify-content: center;}
+button{height:30px;
+     width:100px;
+    background-color: #00bf0b;
+border-radius: 8px;
+}
+#result{background-color: #00bf0b;
+color: #000000;
+font-size: medium;
+font-weight: 600;}
